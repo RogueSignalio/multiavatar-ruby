@@ -34,12 +34,12 @@ puts "Test:  Using avatar_id of 'brogue' avatar_id re-produces same avatar." if 
 
 # Re-use instance, generating a new avatar with a different avatar_id, and no background
 old_ob_av2 = ob_av2.avatar
-ob_av2.generate('bRogueTwo',true)
-puts "Example:  Re-use instance with avatar_id 'bRogueTwo' and no background: #{ob_av2.avatar[0..10]} ... #{ob_av2.avatar[400..500]} ..."
-write_avatar('bRogueTwo_object_av2',ob_av2.avatar)
+ob_av2.generate('Robo',true)
+puts "Example:  Re-use instance with avatar_id 'Robo' and no background: #{ob_av2.avatar[0..10]} ... #{ob_av2.avatar[400..500]} ..."
+write_avatar('Robo_object_av2',ob_av2.avatar)
 
 # Proving that a single instance can produce many unqiue avatars after init.
-puts "Test:  Instance that created 'brogue' created a new avatar after init using new id of 'bRogueTwo" if ob_av2.avatar != old_ob_av2
+puts "Test:  Instance that created 'brogue' created a new avatar after init using new id of 'Robo" if ob_av2.avatar != old_ob_av2
 
 # Instance use with randomly generated avatar and no background
 av3 = Multiavatar.generate(nil,true)
