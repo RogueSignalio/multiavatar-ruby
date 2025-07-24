@@ -1,5 +1,16 @@
+# Multiavatar - Ruby #
+
+<img src="https://raw.githubusercontent.com/multiavatar/Multiavatar/main/logo.png?v=001" width="65">
+
 This is a quick and dirty ruby conversion of the php/py implementations of multiavatar.
-See that project for details here: https://multiavatar.com.
+
+[Multiavatar](https://multiavatar.com) is a multicultural avatar maker.
+
+Multiavatar represents people from multiple races, multiple cultures, multiple age groups, multiple worldviews and walks of life.
+
+In total, it is possible to generate **12,230,590,464** unique avatars.
+
+See more project for details here: https://multiavatar.com and here: https://github/multiavatar
 
 I made this because we were using the online Multiavatar API to generate avatars for users for a few apps.  We loved it, and it worked great.  Then the API was removed and suddenly no new users could be created (because we didn't fail over gracefully ... shame on us).  So here we are, implementing a native one for our use in a hasty fashion.
 
@@ -10,6 +21,14 @@ The optional parameters have not been tested, and frankly, I think the part/them
 Perhaps I will return to test/fix that and make a Gem, but I wouldn't hold my breath.  It works for what we need, sooo ....
 
 I wouldn't be sad if someone else does either of these things.
+
+=====================================================================================
+Differences from source scripts:
+* Instead of doing nothing when no avatar_id is passed, we use Secure.random() 
+  to generate a random avatar for the caller.
+* We provided both a class and an instance interface.
+* Some logic optimizations were made, were easily doable.
+=====================================================================================
 
 =====================================================================================
 How to use:
@@ -82,3 +101,5 @@ Original source project, Multiavatar:
   Github    https://github.com/multiavatar/multiavatar-php
   Github    https://github.com/multiavatar/multiavatar-python
   License   https://multiavatar.com/license
+
+<img src="https://multiavatar.com/press/img/screenshots/screenshot-02.png?v=001">
