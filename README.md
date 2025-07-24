@@ -20,13 +20,12 @@ Much thanks to the Multiavatar project for creating this avatar system, I think 
 
 The optional parameters have not been tested, and frankly, I think the part/theme override isn't really implemented  correctly in this version or the python/php versions (unsure about the JS version) or I don't understand the exact functionality (and honestly, I didn't spend much time trying to understand it since we don't use it).  The original php/python code seems to replace ALL parts with one specific part.  I think is in error, but I just made the code "work" in ruby and did some ruby optimizations.
 
-Perhaps I will return to test/fix that and make a Gem, but I wouldn't hold my breath.  It works for what we need, sooo ....
+Perhaps I will return to test/fix that and make a Gem, but I wouldn't hold my breath.  It works for what we need, sooo ... not likely to get updates here from me.
 
 I wouldn't be sad if someone else does either of these things.
 
 ## Differences from source scripts: ##
-* Instead of doing nothing when no avatar_id is passed, we use Secure.random() 
-  to generate a random avatar for the caller.
+* Instead of returning empty string when an avatar_id is not passed, we use Secure.random() to generate a random avatar for the caller.
 * We provided both a class and an instance interface.
 * Some logic optimizations were made, when and where it was easily doable.
 
@@ -106,23 +105,24 @@ Demonstrates that an avatar_id will reliably reproduce the same avatar:
   File.write( 'test_avatar.svg', Multiavatar.generate('Robo') ) 
 ```
 
-### So long, and thanks for all the fish! ###
-
-### More about us: ###
-```
-  https://roguesignal.io
-  https://github.com/RogueSignalio
-  https://scramble.roguesignal.io
-```
+___
 
 ### Original source project, Multiavatar: ###
-```
-  Copyright: Gie Katon (2020-2021) (https://giekaton.com)
-  URL:      https://multiavatar.com
-  Github:   https://github.com/multiavatar/Multiavatar
-  Github    https://github.com/multiavatar/multiavatar-php
-  Github    https://github.com/multiavatar/multiavatar-python
-  License   https://multiavatar.com/license
-```
+
+Copyright: Gie Katon (2020-2021) (https://giekaton.com)
+- URL:      https://multiavatar.com
+- Github:   https://github.com/multiavatar/Multiavatar
+- Github    https://github.com/multiavatar/multiavatar-php
+- Github    https://github.com/multiavatar/multiavatar-python
+- License   https://multiavatar.com/license
+
+### More about us: ###
+- https://roguesignal.io
+- https://github.com/RogueSignalio
+- https://scramble.roguesignal.io
+
+### So long, and thanks for all the fish! ###
+
+___
 
 <img src="https://multiavatar.com/press/img/screenshots/screenshot-02.png?v=001">
